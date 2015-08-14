@@ -11,6 +11,9 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+   introduction
+   hardware 
+   software
 
 
 Indices and tables
