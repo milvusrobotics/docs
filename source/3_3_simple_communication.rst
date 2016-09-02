@@ -1,7 +1,5 @@
 5. Simple Communication
 =======================
-	
-
 
 As a We said before, 'Node' is the ROS term for an executable that is connected to the ROS network. In this tutorial,, We'll create a publisher node which will continually broadcast some messages. And Two subscribers; one of them reads the topic and writes every message which it received, and the other, reads all of them but prints only Hello messages.
 
@@ -12,6 +10,8 @@ Our goal is writing the nodes like in the diagram below:
 
 1. Creating the Package
 -----------------------
+
+If you will encounter problems on creating package, you can clone from `github <https://github.com/milvusrobotics/ros_tutorials/tree/master/pub_sub_tutorial>`_. But we suggest creating package by hand for good experiment.
 
 In a previous tutorials, We've created our workspace. First, we need to locate our nodes in some package. Go to the your workspace's src folder before creating new package:
 
