@@ -47,7 +47,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'MRP 2'
-copyright = u'2015, Milvus Robotics'
+copyright = u'2016, Milvus Robotics'
 author = u'Milvus Robotics'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -127,7 +127,7 @@ html_theme_path = ['_themes',]
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-#html_logo = None
+#html_logo = "_static/milvus_logo.png"
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
@@ -292,3 +292,11 @@ texinfo_documents = [
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
+
+from recommonmark.parser import CommonMarkParser
+
+source_parsers = {
+    '.md': CommonMarkParser,
+}
+
+source_suffix = ['.rst', '.md']

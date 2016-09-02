@@ -3,7 +3,11 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to MRP 2's documentation!
+.. image:: _static/milvus_logo.png
+	:target: directives_
+   
+   
+Welcome to MRP2's documentation!
 =================================
 
 Contents:
@@ -11,9 +15,9 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-   introduction
-   hardware 
-   software
+   1_getting_started_with_linux
+   2_introduction_to_ros 
+   3_learn_ros
 
 
 Indices and tables
