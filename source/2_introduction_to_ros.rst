@@ -1,7 +1,7 @@
 Introduction to Robot Operating System (ROS)
-=============================================
+============================================
 
-ROS is a collection of software frameworks for robot software development, providing operating system-like functionality on a heterogeneous computer cluster. ROS provides standard operating system services such as hardware abstraction, low-level device control, implementation of commonly used functionality, message-passing between processes, and package management.
+ROS provides libraries and tools to help software developers create robot applications. It provides hardware abstraction, device drivers, libraries, visualizers, message-passing, package management, and more.
 
 Running sets of ROS-based processes are represented in a graph architecture where processing takes place in nodes that may receive, post and multiplex sensor, control, state, planning, actuator and other messages. For more basic information, visit: `ROS - Wikipedia <https://en.wikipedia.org/wiki/Robot_Operating_System>`_
 
@@ -30,8 +30,7 @@ Sample communication on local network
 .. figure:: _static/ros_network_local.svg
    :align: center
 
-In this example, The Publisher node generates and sends some message to ``chatter`` topic. That diagram doesn't show but the message has parameter to assign message to specific node. 
-That two subscribers are listening the ``chatter`` topic. And if the message's id is same with that node's id. It processes the message. We'll show you the application codes in next tutorials.
+In this example, The Publisher node generates and sends some message to ``chatter`` topic. That two subscribers are listening the ``chatter`` topic. We'll show you the application codes in next tutorials.
 
 Sample Communication of Two ROS PCs
 -----------------------------------
@@ -41,13 +40,13 @@ Sample Communication of Two ROS PCs
 
 In this example, We have a robot that connected to our home wifi network and rambles in our house. Otherside, Our PC is connected to same network. Note that if there is one ROS master is running on Robot side, there is no need to open second master if we aren't doing some experimental things.
 
-The ``laser_sensor_node`` is hardware node and it connected to laser range finder device via some channel (for ex. serial communication). It reads raw data and makes it readable by ros nodes. And publishes to ``laser_scan`` topic. 
+The ``laser_sensor_node`` is hardware node and it connected to laser range finder device via some channel (for ex. serial communication). It reads raw data and makes it readable by ros nodes by publishing to ``laser_scan`` topic. 
 
-The gmapping node subscribes to that ``laser_scan`` topic and it generates map with it via fusing other datas from other topics. 
+The ``gmapping`` node subscribes to that ``laser_scan`` topic and it generates map with it via fusing other datas from other topics. 
 
 Finally that the RViz node is running on our Personal Ubuntu computer, not in robot's computer. First, It locates ``laser_scan`` topic via previously defined ``ros_master`` with master's ip. After that, Our RViz reads laser data from ``laser_scan`` topic via network channel.
 
-Also In this example, RViz is connected to other topics and reads other datas. The Map data is one of them. Reads map and laser data to show laser data --red lines and dots-- on the map to showing knowledge of where is the collusions or free areas from robot's view:
+Also In this example, RViz is connected to other topics and reads other datas. The Map topic is one of them. Reads map and laser data to show laser data --red lines and dots-- on the map to showing knowledge of where is the collusions or free areas from robot's view:
 
 .. figure:: _static/gmapping.png
    :align: center

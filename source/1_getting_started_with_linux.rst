@@ -51,19 +51,19 @@ Most of programs recognize your home path via ``~`` (tilde) character. Non param
 	
 	$ cd
 
-Let's create something. For a creating text file named ``my_first.txt``, use touch command in your terminal. If you are in home directory, it will create successfully:
+Let's create something. For a creating text file named ``my_first.txt``, use ``touch`` command in your terminal. If you are in home directory, it will create successfully:
 
 ::
 	
 	$ touch my_first.txt
 
-And now, see the file which you created. Say ls to list files and folders:
+And now, see the file which you've created. Say ``ls`` to list files and folders:
 
 ::
 	
 	$ ls
 
-For an editing that text file, use default editor gedit:
+For an editing that text file, use default editor ``gedit``:
 
 ::
 	
@@ -93,7 +93,7 @@ Next command in this tutorial is ``cp``. It copies from ``<source path>`` to ``<
 	
 	$ cp my_first.txt my_folder_123/my_first.txt
 
-It copies your file to that folder which you created before. Also you don't need to use this command in your home directory, if your username is ``frodo``, just type(if not, replace ``frodo`` with your username):
+It copies your file to that folder which you've created before. Also you don't need to use this command in your home directory, if your username is ``frodo``, just type(if not, replace ``frodo`` with your username):
 
 ::
 	
@@ -105,7 +105,7 @@ If you want to more clear view on your terminal screen, may be you want to colou
 	
 	$ gedit ~/.bashrc
 
-Next command can be dangerous but if you know what are you doing, that command gives you a permissions for real control of your pc. Note that ``sudo`` command wants your password to give you a permission and when you entering pasword to command line, it doesn't show characters or some dots. Don't worry about it, just type your password.
+Next command can be dangerous but if you know what are you doing, that command gives you a permissions for real control of your pc. Note that ``sudo`` command wants your password to give you a permission and when you entering pasword to command line, it doesn't show some asterisk characters (``****``) or some dots (``••••``). Don't worry about it, just type your password.
 
 ::
 	
