@@ -81,7 +81,7 @@ To see odometry topic's message type, enter:
 
 The output will equal to ``nav_msgs/Odometry``. 
 
-And to see the message's content use rosmsg command:
+And to see the message's content use ``rosmsg`` command:
 
 ::
 	
@@ -94,7 +94,7 @@ The output will be contained some other message types. Because some ROS messages
 
 A parameter server is a shared, multi-variate dictionary that is accessible via network  APIs. Nodes use this server to store and retrieve parameters at runtime. As it is not designed for high-performance, it is best used for static, non-binary data such as configuration parameters.
 
-And the rosparam command-line tool can get and set ROS Parameters on the Parameter Server using YAML-encoded files. It also contains an experimental library for using YAML with the Parameter Server. This library is intended for internal use only. rosparam can be invoked within a roslaunch file.
+And the ``rosparam`` command-line tool can get and set ROS Parameters on the Parameter Server using YAML-encoded files. It also contains an experimental library for using YAML with the Parameter Server. This library is intended for internal use only. ``rosparam`` can be invoked within a roslaunch file.
 
 For listing all parameters, use:
 

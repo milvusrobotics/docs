@@ -39,7 +39,7 @@ We've previously used the ``ROS_INFO(...)`` function in Publisher - Subscriber T
 `roswtf <http://wiki.ros.org/roswtf>`_
 --------------------------------------
 
-roswtf examines your system to try and find problems. Try this command to examine errors when something is wrong:
+``roswtf`` examines your system to try and find problems. Try this command to examine errors when something is wrong:
 
 ::
 	

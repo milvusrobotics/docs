@@ -22,11 +22,7 @@ To join the ROS network of MRP2 from your own PC, you should run just two comman
 
     $ export ROS_HOSTNAME=<IP_OF_YOUR_PC>
 
-Otherwise add these lines to your .bashrc file. 
-
-.. warning::
-
-    Don't forget to replace ``<IP_OF_...>`` sections with real ip's.
+Otherwise add these lines to your ``.bashrc`` file by: 
 
 ::
 
@@ -36,6 +32,10 @@ Otherwise add these lines to your .bashrc file.
 
     $ echo "export ROS_HOSTNAME=<IP_OF_YOUR_PC>" >> ~/.bashrc
 
+.. warning::
+
+    Don't forget to replace ``<IP_OF_...>`` sections with real ip's.
+
 After writing these lines to your ``.bashrc`` file, run
 
 ::
@@ -44,9 +44,9 @@ After writing these lines to your ``.bashrc`` file, run
 
 command once. 
 
-Now, if you launched a ros process from that terminal, it communicates with Robot's ``ros_master`` process. You can simply run navigation applications as a described in previous navigation tutorials.
+Now, if you'll launch a ros process from that terminal, it communicates with Robot's ``ros_master`` process. You can simply run navigation applications as a described in previous navigation tutorials.
 
-When you added these lines to your ``.bashrc`` file, you don't need to source everytime. That file is already sourcing when the terminal client starts up. Note that, If these lines are added the your ``.bashrc`` file, You won't be able to launch local ROS  applications like Gazebo Simulation on your PC. Before launching local applications, you need to run these  commands. They clear ``ROS_HOSTNAME`` and ``ROS_MASTER_IP`` variables.
+When you added these lines to your ``.bashrc`` file, you don't need to source everytime. That file is already sourcing when the terminal client starts up. Note that, If these lines are added the your ``.bashrc`` file, You won't be able to launch local ROS  applications like Gazebo Simulation on your PC. Before launching local applications, you need to run these  commands, They clear ``ROS_HOSTNAME`` and ``ROS_MASTER_IP`` variables like a described in previous tutorial:
 
 ::
 

@@ -8,17 +8,17 @@ Explore the simulation environment from robot's vision and save a map.
 
 Note that, be sure the ``ROS_MASTER_IP`` and ``ROS_HOSTNAME`` variables are empty. For that, you should be check this variables after opening up new terminal, like a described in first tutorial.
 
-If there are already running Gazebo process exists you can pass to second seciton directly but for the easiness for launching with a generated map later, be sure the robot is standing in its first location. If it is not, restart by killing and opening it back via ``Ctrl+C`` and;
+If there are already running Gazebo process exists you can pass to second seciton directly but for the easiness for launching with a generated map later, be sure the robot is standing in its first location. If it is not, restart by killing and opening it back, via ``Ctrl+C`` and;
 
 ::
 
-    $ roslaunch mrp2_gazebo mrp2_gazebo.launching
+    $ roslaunch mrp2_gazebo mrp2_gazebo.launch
 
 command, Or normally start in same way;
 
 ::
 
-    $ roslaunch mrp2_gazebo mrp2_gazebo.launching
+    $ roslaunch mrp2_gazebo mrp2_gazebo.launch
 
 2. Start Gmapping Process
 -------------------------
@@ -34,7 +34,7 @@ Now, gmapping process is started and the robot is started to create a map and lo
 3. Visualise Gmapping Process via RViz
 --------------------------------------
 
-Gmapping process is running but We need to know actually what is going on. Open up other terminal and type;
+Gmapping process is running but We need to know actually what is going on. Open up another terminal and type;
 
 ::
 
@@ -50,6 +50,6 @@ If your exploring will done, You can save the map whenever you want, open up new
 
 ::
 
-    $ rosrun map_server map_saver -f <PATH TO SAVE ex:/home/gazi/>new_map
+    $ rosrun map_server map_saver -f <PATH TO SAVE ex:/home/gazi/>new_map_1
 
-This command generates two files: new_map.pgm and new_map.yaml. You can use these files with amcl application later. To find out how; proceed the next tutorial.
+This command generates two files: ``new_map_1.pgm`` and ``new_map_1.yaml``. You can use these files with ``amcl`` application later. To find out how; proceed the next tutorial.

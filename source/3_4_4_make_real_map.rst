@@ -19,7 +19,7 @@ Now you can open SLAM application. Run this command on your remote PC's terminal
 	
 	$ roslaunch mrp2_navigation gmapping_demo.launch
 
-Now, gmapping process is started and the robot is started to create a map and locating itself on it. You can start moving robot via joystick or what you prefer to control as a described in previous tutorial. For example If you want to control it via  rqt_robot_steering, open up new terminal tab and run ``rqt_robot_steering``:
+Now, gmapping process is started and the robot is started to create a map and locating itself on it. You can start moving robot via joystick or what you prefer to control as a described in previous tutorial. For example If you want to control it via ``rqt_robot_steering``, open up new terminal tab and run ``rqt_robot_steering``:
 
 ::
 	
@@ -48,10 +48,12 @@ If your exploring will done, You can save the map whenever you want, for doing t
 	
 	$ ssh mrp2@<IP_OF_ROBOT>
 
-And save the map, if you want to name it that my_new_map, run;
+And save the map, if you want to name it that ``my_new_map``, run;
 
 ::
 	
 	$ rosrun map_server map_saver -f /home/mrp2/my_new_map
 
-This command generates two files: ``new_map.pgm`` and ``new_map.yaml``. One can use these files with ``amcl`` application later. It is similiar with simulation. You can follow the previous amcl tutorial. Just, don't forget; ``map_server`` is saves the map on robot's computer.
+This command generates two files: ``new_map.pgm`` and ``new_map.yaml``. 
+
+One can use these files with ``amcl`` application later. You can follow the previous amcl tutorial, It is similiar with simulation. Just, don't forget; the ``map_server`` saves the map on robot's computer.

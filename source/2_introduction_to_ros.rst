@@ -20,9 +20,9 @@ Quick Overview of Graph Concepts
 
 `Master <http://wiki.ros.org/Master>`_: The ROS Master provides naming and registration services to the rest of the nodes in the ROS system. It tracks publishers and subscribers to topics as well as services. The role of the Master is to enable individual ROS nodes to locate one another. Once these nodes have located each other they communicate with each other peer-to-peer.
 
-`rosout <http://wiki.ros.org/rosout>`_: System-wide logging mechanism for messages sent to the /rosout topic. ROS equivalent of stdout/stderr
+`rosout <http://wiki.ros.org/rosout>`_: System-wide logging mechanism for messages sent to the ``/rosout`` topic. ROS equivalent of ``stdout``/``stderr``
 
-`roscore <http://wiki.ros.org/roscore>`_: Roscore is a collection of nodes and programs: Master + rosout + parameter server, that are pre-requisites of a ROS-based system.
+`roscore <http://wiki.ros.org/roscore>`_: ``roscore`` is a collection of nodes and programs: Master + rosout + parameter server, that are pre-requisites of a ROS-based system.
 
 Sample communication on local network
 -------------------------------------
@@ -30,9 +30,8 @@ Sample communication on local network
 .. figure:: _static/ros_network_local.svg
    :align: center
 
-The Publisher node generates and sends some message to chatter topic. That diagram doesn't show but the message has parameter to assign message to specific node. 
-
-That two subscribers are listening the chatter topic. And if the message's id is same with that node's id. It processes the message.
+In this example, The Publisher node generates and sends some message to ``chatter`` topic. That diagram doesn't show but the message has parameter to assign message to specific node. 
+That two subscribers are listening the ``chatter`` topic. And if the message's id is same with that node's id. It processes the message. We'll show you the application codes in next tutorials.
 
 Sample Communication of Two ROS PCs
 -----------------------------------
@@ -42,13 +41,13 @@ Sample Communication of Two ROS PCs
 
 In this example, We have a robot that connected to our home wifi network and rambles in our house. Otherside, Our PC is connected to same network. Note that if there is one ROS master is running on Robot side, there is no need to open second master if we aren't doing some experimental things.
 
-The laser_sensor_node is hardware node and it connected to laser range finder device via some channel (for ex. serial communication). It reads raw data and makes it readable by ros nodes. And publishes to ``laser_scan`` topic. 
+The ``laser_sensor_node`` is hardware node and it connected to laser range finder device via some channel (for ex. serial communication). It reads raw data and makes it readable by ros nodes. And publishes to ``laser_scan`` topic. 
 
 The gmapping node subscribes to that ``laser_scan`` topic and it generates map with it via fusing other datas from other topics. 
 
-Finally that the RViz node is running on our Personal Ubuntu computer, not in robot's computer. First, It locates ``laser_scan`` topic via previously defined ros_master with its ip. After that, Our RViz reads laser data from ``laser_scan`` topic via network channel.
+Finally that the RViz node is running on our Personal Ubuntu computer, not in robot's computer. First, It locates ``laser_scan`` topic via previously defined ``ros_master`` with master's ip. After that, Our RViz reads laser data from ``laser_scan`` topic via network channel.
 
-Also In this example, RViz is connected to other topics and reads other datas. The Map data is one of them. Reads map and laser data to show laser data (red lines and dots) on the map for knowledge of where is the collusions or free areas from robot's view:
+Also In this example, RViz is connected to other topics and reads other datas. The Map data is one of them. Reads map and laser data to show laser data --red lines and dots-- on the map show knowledge of where is the collusions or free areas from robot's view:
 
 .. figure:: _static/gmapping.png
    :align: center
