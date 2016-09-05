@@ -47,7 +47,7 @@ The gmapping node subscribes to that ``laser_scan`` topic and it generates map w
 
 Finally that the RViz node is running on our Personal Ubuntu computer, not in robot's computer. First, It locates ``laser_scan`` topic via previously defined ``ros_master`` with master's ip. After that, Our RViz reads laser data from ``laser_scan`` topic via network channel.
 
-Also In this example, RViz is connected to other topics and reads other datas. The Map data is one of them. Reads map and laser data to show laser data --red lines and dots-- on the map show knowledge of where is the collusions or free areas from robot's view:
+Also In this example, RViz is connected to other topics and reads other datas. The Map data is one of them. Reads map and laser data to show laser data --red lines and dots-- on the map to showing knowledge of where is the collusions or free areas from robot's view:
 
 .. figure:: _static/gmapping.png
    :align: center
