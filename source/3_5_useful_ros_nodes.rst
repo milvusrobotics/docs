@@ -6,7 +6,7 @@ For more information, you can visit the `ROS Wiki <http://wiki.ros.org>`_
 `roslaunch <http://wiki.ros.org/roslaunch>`_
 --------------------------------------------
 
-``roslaunch`` is a tool for easily launching multiple ROS nodes locally and remotely via SSH, as well as setting parameters on the Parameter Server. It includes options to automatically respawn processes that have already died. roslaunch takes in one or more XML configuration files (with the ``.launch`` extension) that specify the parameters to set and nodes to launch, as well as the machines that they should be run on.
+``roslaunch`` is a tool for easily launching multiple ROS nodes locally and remotely via SSH, as well as setting parameters on the Parameter Server. It includes options to automatically respawn processes that have already died. It takes in one or more XML configuration files (with the ``.launch`` extension) that specify the parameters to set and nodes to launch, as well as the machines that they should be run on.
 
 Many ROS packages come with ``.launch`` files, which you can run with:
 

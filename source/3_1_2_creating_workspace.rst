@@ -9,7 +9,7 @@ Now, you need to create one workspace to create custom applications. Create fold
 	$ cd ~/catkin_ws/src
 	$ catkin_init_workspace
 
-Even though the workspace is empty (there are no packages in the 'src' folder, just a single ``CMakeLists.txt`` link) you can still "build" the workspace:
+Even though the workspace is empty (there are no packages in the ``src`` folder, just a single ``CMakeLists.txt`` link) you can still **build** the workspace:
 
 ::
 	

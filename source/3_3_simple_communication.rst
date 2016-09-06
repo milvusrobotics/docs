@@ -1,7 +1,7 @@
 5. Simple Communication
 =======================
 
-As a We said before, 'Node' is the ROS term for an executable that is connected to the ROS network. In this tutorial, We'll create a publisher node which will continually broadcast some messages. And Two subscribers; one of them reads the topic and writes every message which it received, and the other, reads all of them but prints only Hello messages.
+In this tutorial, We'll create a publisher node which will continually broadcast some messages. And Two subscribers; one of them reads the topic and writes every message which it received, and the other, reads all of them but prints only Hello messages.
 
 Our goal is writing the nodes like in the diagram below:
 
@@ -13,7 +13,7 @@ Our goal is writing the nodes like in the diagram below:
 
 If you will encounter problems on creating package, you can clone from `github <https://github.com/milvusrobotics/ros_tutorials/tree/master/pub_sub_tutorial>`_. But we suggest creating package by hand for good experiment.
 
-In a previous tutorials, We've created our workspace. First, we need to locate our nodes in some package. Go to the your workspace's src folder before creating new package:
+In a previous tutorials, We've created our workspace. First, we need to locate our nodes in some package. Go to the your workspace's ``src`` folder before creating new package:
 
 ::
 	
@@ -146,16 +146,16 @@ Paste the following codes to ``sub1.cpp``:
 
 .. code-block:: c
 	
+	ros::Subscriber sub = n.subscribe ( "chatter", 1000, chatterCallback );
+
+.. code-block:: c
+	
 	void chatterCallback ( const std_msgs::String::ConstPtr &msg )
 	{
 		ROS_INFO ( "I heard: [%s]", msg->data.c_str() );
 	}	
 
 The ``subscribe()`` call is how you tell ROS that you want to receive messages on a given topic. This invokes a call to the ROS master node, which keeps a registry of who is publishing and who is subscribing.  Messages are passed to a callback function, here called chatterCallback.  ``subscribe()`` returns a Subscriber object that you must hold on to until you want to unsubscribe.  When all copies of the Subscriber object go out of scope, this callback will automatically be unsubscribed from this topic:
-
-.. code-block:: c
-	
-	ros::Subscriber sub = n.subscribe ( "chatter", 1000, chatterCallback );
 
 The second parameter to the ``subscribe()`` function is the size of the message queue. If messages are arriving faster than they are being processed, this is the number of messages that will be buffered up before beginning to throw away the oldest ones.
 
@@ -191,7 +191,7 @@ Finally, paste the following to ``sub2.cpp``:
 	return 0;
 	}
 
-In here additionaly, We're looking to first characters of string. If it is Hello, Subscriber understands that message is in English:
+In here additionaly, We're looking to first characters of string. If it is ``Hello``, Subscriber understands that message is in English:
 
 .. code-block:: c
 	
@@ -242,7 +242,7 @@ After building via ``catkin_make``, you should source the new files for that ter
 4. Test Your Nodes
 ------------------
 
-In a previous tutorials, ``roscore`` is started automatically via launching ``mrp2_gazebo.launch`` file. But now you must to open it first in another terminal:
+In a previous tutorials, ``roscore`` is started automatically via launching ``mrp2_gazebo.launch`` file. But now you must open it first in another terminal:
 
 ::
 	

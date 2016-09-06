@@ -6,7 +6,9 @@ Explore the simulation environment from robot's vision and save a map.
 1. Start Gazebo Process
 -----------------------
 
-Note that, be sure the ``ROS_MASTER_IP`` and ``ROS_HOSTNAME`` variables are empty. For that, you should be check this variables after opening up new terminal, like a described in first tutorial.
+.. note::
+	
+	Be sure, the ``ROS_MASTER_IP`` and ``ROS_HOSTNAME`` variables are empty. For that, you should be check this variables after opening up new terminal, like a described in first tutorial.
 
 If there are already running Gazebo process exists you can pass to second seciton directly but for the easiness for launching with a generated map later, be sure the robot is standing in its first location. If it is not, restart by killing and opening it back, via ``Ctrl+C`` and;
 

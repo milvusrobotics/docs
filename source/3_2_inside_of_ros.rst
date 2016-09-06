@@ -1,7 +1,7 @@
 4. What's working inside of ROS?
 ================================
 
-As a described in How ROS works part under the Introducing section; Nodes, Topics and parameters are the some of most important parts of ROS. 
+As a described in **Quick Overview of Graph Concepts** part under the Introducing section; Nodes, Topics and parameters are the some of most important parts of ROS. 
 
 For this tutorial, First, run MRP2 on gazebo:
 
@@ -9,7 +9,7 @@ For this tutorial, First, run MRP2 on gazebo:
 	
 	$ roslaunch mrp2_gazebo mrp2_gazebo.launch
 
-and minimize it. That launch file starts roscore and some nodes and some topics.
+and minimize it. That ``.launch`` file starts roscore and some nodes and some topics.
 
 
 4.1 Nodes
@@ -17,7 +17,7 @@ and minimize it. That launch file starts roscore and some nodes and some topics.
 
 As a described previously, a node really isn't much more than an executable file within a ROS package.
 
-To run another node by hand, you can use rosrun command. For example, if you haven't joystick controller or you have a joystick controller but if you want to some chaos on robot's control, open up another terminal run ``rqt_robot_steering``:
+To run another node by hand, you can use ``rosrun`` command. For example, if you haven't joystick controller or you already have a joystick controller but if you want to some chaos on robot's control, open up another terminal run ``rqt_robot_steering``:
 
 ::
 	
@@ -29,7 +29,7 @@ Now you can send the velocity commands to robot with that robot steering window 
 	
 	$ rosnode list
 
-This command prints list of the ROS nodes that are currently running. You can find your previously runned robot steering node. Also type just single rosnode command to see simple help:
+This command prints list of the ROS nodes that are currently running. You can find your previously ran robot steering node. Also type just single ``rosnode`` command to see simple help:
 
 ::
 	
@@ -59,13 +59,13 @@ Then choose one of them. Our choice is odometry topic. This topic is published b
 	
 	$ rostopic echo /mobile_base_controller/odom
 
-Also type just single rostopic command to see simple help:
+Also type just single ``rostopic`` command to see simple help:
 
 ::
 	
 	$ rostopic
 
-And take a look at the rostopic usage examples.
+And take a look at the ``rostopic`` usage examples.
 
 
 4.3 Messages
@@ -92,7 +92,7 @@ The output will be contained some other message types. Because some ROS messages
 4.4 Parameters
 --------------
 
-A parameter server is a shared, multi-variate dictionary that is accessible via network  APIs. Nodes use this server to store and retrieve parameters at runtime. As it is not designed for high-performance, it is best used for static, non-binary data such as configuration parameters.
+A parameter server is a shared, multi-variate dictionary that is accessible via network APIs. Nodes use this server to store and retrieve parameters at runtime. As it is not designed for high-performance, it is best used for static, non-binary data such as configuration parameters.
 
 And the ``rosparam`` command-line tool can get and set ROS Parameters on the Parameter Server using YAML-encoded files. It also contains an experimental library for using YAML with the Parameter Server. This library is intended for internal use only. ``rosparam`` can be invoked within a roslaunch file.
 
@@ -106,7 +106,7 @@ command. If you've not closed roscore process, parameter server keeps the parame
 
 If you've not closed a running robot on gazebo process, continue, Otherwise reopen like a described in above.
 
-You can print and change parameters via ``rosparam get`` / ``rosparam set`` commands. You can see all parameters' names by typing:
+You can print and change parameter values via ``rosparam get`` / ``rosparam set`` commands. You can see all parameters' names by typing:
 
 ::
 	

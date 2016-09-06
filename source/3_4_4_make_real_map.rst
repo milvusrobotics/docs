@@ -13,7 +13,15 @@ If the robot is already running, you can pass to second section directly. Otherw
 2. Start Gmapping Process
 -------------------------
 
-Now you can open SLAM application. Run this command on your remote PC's terminal;
+Now you can open SLAM application. Open up a terminal on your Personal Computer and connect to robot via SSH first:
+
+::
+	
+	$ ssh mrp2@<IP_OF_ROBOT>
+
+The default password of user ``mrp2`` is ``temppwd``.
+
+Then enter the command below to SSH connection ready terminal
 
 ::
 	
